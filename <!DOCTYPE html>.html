@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday Payal 💖</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Pacifico&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:linear-gradient(135deg,#ffd6e7,#f6d7ff,#d7e9ff);
+    overflow-x:hidden;
+    color:#ff4f87;
+}
+
+/* FLOATING HEARTS */
+
+.hearts{
+    position:fixed;
+    width:100%;
+    height:100%;
+    overflow:hidden;
+    z-index:-1;
+}
+
+.hearts span{
+    position:absolute;
+    bottom:-100px;
+    font-size:28px;
+    animation:float 12s linear infinite;
+    opacity:0.8;
+}
+
+.hearts span:nth-child(1){left:10%;animation-duration:8s;}
+.hearts span:nth-child(2){left:25%;animation-duration:12s;}
+.hearts span:nth-child(3){left:40%;animation-duration:10s;}
+.hearts span:nth-child(4){left:55%;animation-duration:15s;}
+.hearts span:nth-child(5){left:75%;animation-duration:9s;}
+.hearts span:nth-child(6){left:90%;animation-duration:13s;}
+
+@keyframes float{
+    0%{
+        transform:translateY(0) rotate(0deg);
+        opacity:0;
+    }
+
+    20%{
+        opacity:1;
+    }
+
+    100%{
+        transform:translateY(-120vh) rotate(360deg);
+        opacity:0;
+    }
+}
+
+/* HERO SECTION */
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:40px 20px;
+}
+
+.hero-box{
+    width:100%;
+    max-width:1200px;
+
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:50px;
+    align-items:center;
+}
+
+/* LEFT CARD */
+
+.left-card{
+
+    background:rgba(255,255,255,0.35);
+
+    backdrop-filter:blur(15px);
+
+    padding:45px;
+
+    border-radius:35px;
+
+    border:2px solid rgba(255,255,255,0.5);
+
+    box-shadow:0 20px 40px rgba(255,105,180,0.2);
+
+    animation:popup 1s ease;
+}
+
+.tag{
+    display:inline-block;
+
+    background:white;
+
+    color:#ff4f87;
+
+    padding:12px 22px;
+
+    border-radius:50px;
+
+    font-weight:600;
+
+    margin-bottom:20px;
+
+    box-shadow:0 10px 20px rgba(0,0,0,0.08);
+}
+
+.title{
+    font-family:'Pacifico',cursive;
+
+    font-size:78px;
+
+    line-height:1.1;
+
+    color:#ff4f87;
+
+    margin-bottom:15px;
+}
+
+.name{
+    font-size:38px;
+    font-weight:700;
+    margin-bottom:15px;
+}
+
+.desc{
+    font-size:20px;
+    line-height:1.8;
+    color:#6f5d70;
+}
+
+/* BIG CAKE */
+
+.cake{
+    font-size:180px;
+
+    text-align:center;
+
+    margin:30px 0;
+
+    animation:bounce 2s infinite;
+
+    filter:
+    drop-shadow(0 0 10px #ffffff)
+    drop-shadow(0 0 25px #9ad9ff)
+    drop-shadow(0 0 45px #5abfff);
+
+    position:relative;
+}
+
+.cake::after{
+
+    content:"💙 🤍 💙";
+
+    position:absolute;
+
+    bottom:-25px;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    font-size:30px;
+}
+
+/* BUTTON */
+
+.btn{
+    display:inline-block;
+
+    margin-top:35px;
+
+    background:linear-gradient(135deg,#ff4f9a,#ff80c7);
+
+    color:white;
+
+    text-decoration:none;
+
+    padding:16px 34px;
+
+    border-radius:50px;
+
+    font-size:18px;
+
+    font-weight:600;
+
+    transition:0.3s;
+
+    box-shadow:0 10px 25px rgba(255,79,154,0.3);
+}
+
+.btn:hover{
+    transform:translateY(-6px) scale(1.05);
+}
+
+/* IMAGE SECTION */
+
+.photo-box{
+    display:flex;
+    justify-content:center;
+    position:relative;
+}
+
+.frame{
+    width:100%;
+    max-width:430px;
+
+    background:white;
+
+    padding:18px;
+
+    border-radius:25px;
+
+    transform:rotate(-3deg);
+
+    box-shadow:0 20px 40px rgba(0,0,0,0.15);
+
+    animation:popup 1.3s ease;
+}
+
+.frame img{
+    width:100%;
+    border-radius:18px;
+    display:block;
+}
+
+.sticker{
+
+    position:absolute;
+
+    bottom:-15px;
+
+    right:20px;
+
+    background:white;
+
+    padding:12px 20px;
+
+    border-radius:20px;
+
+    font-weight:600;
+
+    color:#ff4f87;
+
+    box-shadow:0 10px 25px rgba(0,0,0,0.12);
+}
+
+/* MESSAGE SECTION */
+
+.message-section{
+    padding:80px 20px;
+}
+
+.message-box{
+
+    max-width:1150px;
+
+    margin:auto;
+
+    background:rgba(255,255,255,0.35);
+
+    backdrop-filter:blur(15px);
+
+    padding:50px;
+
+    border-radius:35px;
+
+    box-shadow:0 20px 40px rgba(255,105,180,0.15);
+}
+
+.message-title{
+
+    text-align:center;
+
+    font-family:'Pacifico',cursive;
+
+    font-size:60px;
+
+    margin-bottom:40px;
+}
+
+.content{
+    display:grid;
+    grid-template-columns:320px 1fr;
+    gap:40px;
+    align-items:center;
+}
+
+.circle{
+    width:300px;
+    height:300px;
+
+    border-radius:50%;
+
+    overflow:hidden;
+
+    border:8px solid white;
+
+    margin:auto;
+
+    box-shadow:0 10px 30px rgba(255,105,180,0.25);
+}
+
+.circle img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.quote{
+
+    background:white;
+
+    padding:40px;
+
+    border-radius:30px;
+
+    font-size:22px;
+
+    line-height:1.8;
+
+    color:#6b5b6c;
+
+    box-shadow:0 10px 25px rgba(0,0,0,0.08);
+}
+
+/* REASON CARDS */
+
+.reasons{
+
+    margin-top:60px;
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+
+    gap:25px;
+}
+
+.reason-card{
+
+    background:white;
+
+    padding:35px 25px;
+
+    border-radius:30px;
+
+    text-align:center;
+
+    transition:0.3s;
+
+    box-shadow:0 10px 20px rgba(0,0,0,0.05);
+}
+
+.reason-card:hover{
+    transform:translateY(-10px);
+}
+
+.reason-card h3{
+    font-size:50px;
+    margin-bottom:15px;
+}
+
+.reason-card p{
+    color:#6f5e70;
+    line-height:1.7;
+}
+
+/* FOOTER */
+
+.footer{
+    text-align:center;
+    padding:40px 20px;
+    color:#865a7b;
+    font-weight:500;
+}
+
+/* ANIMATIONS */
+
+@keyframes popup{
+    0%{
+        transform:scale(0.5);
+        opacity:0;
+    }
+
+    100%{
+        transform:scale(1);
+        opacity:1;
+    }
+}
+
+@keyframes bounce{
+    0%,100%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-15px);
+    }
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+    .hero-box{
+        grid-template-columns:1fr;
+    }
+
+    .title{
+        font-size:58px;
+    }
+
+    .message-title{
+        font-size:45px;
+    }
+
+    .content{
+        grid-template-columns:1fr;
+    }
+
+    .circle{
+        width:250px;
+        height:250px;
+    }
+
+    .quote{
+        font-size:18px;
+    }
+
+    .cake{
+        font-size:130px;
+    }
+
+    .left-card{
+        padding:30px 25px;
+    }
+
+    .message-box{
+        padding:35px 20px;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- FLOATING HEARTS -->
+
+<div class="hearts">
+    <span>💖</span>
+    <span>💕</span>
+    <span>💗</span>
+    <span>💞</span>
+    <span>✨</span>
+    <span>💓</span>
+</div>
+
+<!-- HERO SECTION -->
+
+<section class="hero">
+
+<div class="hero-box">
+
+    <!-- LEFT -->
+
+    <div class="left-card">
+
+        <div class="tag">
+            🎀 For Payal
+        </div>
+
+        <h1 class="title">
+            Happy <br> Birthday!
+        </h1>
+
+        <div class="name">
+            Payal 💖
+        </div>
+
+        <p class="desc">
+            Wishing you endless happiness,
+            smiles, beautiful memories
+            and all the good vibes ✨
+        </p>
+
+        <div class="cake">
+            🎂
+        </div>
+
+        <a href="#message" class="btn">
+            Open Surprise 🎁
+        </a>
+
+    </div>
+
+    <!-- RIGHT IMAGE -->
+
+    <div class="photo-box">
+
+        <div class="frame">
+
+            <!-- YOUR IMAGE -->
+
+            <img src="anime-payal.png" alt="Payal">
+
+        </div>
+
+        <div class="sticker">
+            ✨ You're Amazing
+        </div>
+
+    </div>
+
+</div>
+
+</section>
+
+<!-- MESSAGE SECTION -->
+
+<section class="message-section" id="message">
+
+<div class="message-box">
+
+    <h2 class="message-title">
+        Hey Payal 💖
+    </h2>
+
+    <div class="content">
+
+        <div class="circle">
+
+            <img src="./anime-payal.png"> alt="Payal">
+
+        </div>
+
+        <div class="quote">
+
+            Thank you for being such a sweet and positive person ✨ <br><br>
+
+            Your smile and your vibe make everything feel lighter and happier 💕 <br><br>
+
+            Stay happy, keep smiling and always be yourself 🌸
+
+        </div>
+
+    </div>
+
+    <!-- REASON CARDS -->
+
+    <div class="reasons">
+
+        <div class="reason-card">
+            <h3>💖</h3>
+            <p>Sweet Personality</p>
+        </div>
+
+        <div class="reason-card">
+            <h3>✨</h3>
+            <p>Positive Energy</p>
+        </div>
+
+        <div class="reason-card">
+            <h3>🌸</h3>
+            <p>Cute Smile</p>
+        </div>
+
+        <div class="reason-card">
+            <h3>👑</h3>
+            <p>One Of A Kind</p>
+        </div>
+
+    </div>
+
+</div>
+
+</section>
+
+<!-- FOOTER -->
+
+<div class="footer">
+    Made with 💖 just for Payal
+</div>
+
+</body>
+</html>
