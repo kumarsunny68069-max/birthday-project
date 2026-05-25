@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
+
 <meta name="viewport"
 content="width=device-width, initial-scale=1.0">
 
@@ -22,12 +25,13 @@ html{
 }
 
 body{
+
     font-family:'Poppins',sans-serif;
 
     background:
     linear-gradient(135deg,
     #ffd6e7,
-    #f3d7ff,
+    #efd7ff,
     #d7e9ff);
 
     overflow-x:hidden;
@@ -35,21 +39,31 @@ body{
     color:#ff4f87;
 }
 
-/* FLOATING HEARTS */
+/* HEARTS */
 
 .hearts{
+
     position:fixed;
+
     width:100%;
+
     height:100%;
+
     overflow:hidden;
+
     z-index:-1;
 }
 
 .hearts span{
+
     position:absolute;
+
     bottom:-100px;
+
     font-size:28px;
+
     animation:float 12s linear infinite;
+
     opacity:0.8;
 }
 
@@ -109,6 +123,7 @@ body{
 /* HERO */
 
 .hero{
+
     min-height:100vh;
 
     display:flex;
@@ -135,7 +150,7 @@ body{
     align-items:center;
 }
 
-/* LEFT CARD */
+/* LEFT */
 
 .left-card{
 
@@ -261,11 +276,14 @@ body{
     scale(1.05);
 }
 
-/* IMAGE SECTION */
+/* IMAGE */
 
 .photo-box{
+
     display:flex;
+
     justify-content:center;
+
     position:relative;
 }
 
@@ -286,6 +304,8 @@ body{
     box-shadow:
     0 20px 40px
     rgba(0,0,0,0.15);
+
+    animation:popup 1.3s ease;
 }
 
 .frame img{
@@ -295,27 +315,6 @@ body{
     border-radius:18px;
 
     display:block;
-}
-
-input[type="file"]{
-
-    width:100%;
-
-    margin-bottom:15px;
-
-    padding:14px;
-
-    border:none;
-
-    border-radius:15px;
-
-    background:#ffe5f1;
-
-    color:#ff4f87;
-
-    font-weight:600;
-
-    cursor:pointer;
 }
 
 .sticker{
@@ -357,6 +356,10 @@ input[type="file"]{
     padding:50px;
 
     border-radius:35px;
+
+    box-shadow:
+    0 20px 40px
+    rgba(255,105,180,0.15);
 }
 
 .message-title{
@@ -394,6 +397,10 @@ input[type="file"]{
     border:8px solid white;
 
     margin:auto;
+
+    box-shadow:
+    0 10px 30px
+    rgba(255,105,180,0.25);
 }
 
 .circle img{
@@ -420,7 +427,7 @@ input[type="file"]{
     color:#6b5b6c;
 }
 
-/* REASON CARDS */
+/* REASONS */
 
 .reasons{
 
@@ -445,6 +452,10 @@ input[type="file"]{
     text-align:center;
 
     transition:0.3s;
+
+    box-shadow:
+    0 10px 20px
+    rgba(0,0,0,0.05);
 }
 
 .reason-card:hover{
@@ -490,9 +501,13 @@ input[type="file"]{
     border-radius:35px;
 
     backdrop-filter:blur(15px);
+
+    box-shadow:
+    0 15px 35px
+    rgba(255,105,180,0.15);
 }
 
-#couplePreview{
+.couple-img{
 
     width:100%;
 
@@ -500,7 +515,9 @@ input[type="file"]{
 
     margin-top:20px;
 
-    display:none;
+    box-shadow:
+    0 15px 35px
+    rgba(255,105,180,0.2);
 }
 
 .couple-box p{
@@ -594,17 +611,20 @@ input[type="file"]{
 }
 
 </style>
+
 </head>
 
 <body>
 
 <div class="hearts">
-    <span>💖</span>
-    <span>💕</span>
-    <span>💗</span>
-    <span>💞</span>
-    <span>✨</span>
-    <span>💓</span>
+
+<span>💖</span>
+<span>💕</span>
+<span>💗</span>
+<span>💞</span>
+<span>✨</span>
+<span>💓</span>
+
 </div>
 
 <!-- HERO -->
@@ -612,6 +632,8 @@ input[type="file"]{
 <section class="hero">
 
 <div class="hero-box">
+
+<!-- LEFT -->
 
 <div class="left-card">
 
@@ -647,17 +669,14 @@ Open Surprise 🎁
 
 </div>
 
-<!-- RIGHT -->
+<!-- RIGHT IMAGE -->
 
 <div class="photo-box">
 
 <div class="frame">
 
-<input type="file"
-id="upload1"
-accept="image/*">
-
-<img id="preview1">
+<img src="payal.png"
+alt="Payal">
 
 </div>
 
@@ -686,7 +705,8 @@ Hey Payal 💖
 
 <div class="circle">
 
-<img id="circlePreview">
+<img src="payal.png"
+alt="Payal">
 
 </div>
 
@@ -697,8 +717,8 @@ a sweet and positive person ✨
 
 <br><br>
 
-Your smile makes
-everything feel happier 💕
+Your smile makes everything
+feel happier and brighter 💕
 
 <br><br>
 
@@ -748,11 +768,8 @@ Our Cute Memory 💖
 
 <div class="couple-box">
 
-<input type="file"
-id="coupleUpload"
-accept="image/*">
-
-<img id="BIRTHDAY.jpeg">
+<img src="BIRTHDAY.jpeg"
+class="couple-img">
 
 <p>
 
@@ -773,100 +790,6 @@ Made with 💖 just for Payal
 
 </div>
 
-<script>
-
-/* FIRST IMAGE */
-
-const upload1 =
-document.getElementById("upload1");
-
-const preview1 =
-document.getElementById("preview1");
-
-const circlePreview =
-document.getElementById("circlePreview");
-
-upload1.addEventListener("change",
-function(){
-
-const file = this.files[0];
-
-if(file){
-
-const reader =
-new FileReader();
-
-preview1.style.display =
-"block";
-
-circlePreview.style.display =
-"block";
-
-reader.addEventListener("load",
-function(){
-
-preview1.setAttribute(
-"src",
-this.result
-);
-
-circlePreview.setAttribute(
-"src",
-this.result
-);
-
-});
-
-reader.readAsDataURL(file);
-
-}
-
-});
-
-/* COUPLE IMAGE */
-
-const coupleUpload =
-document.getElementById(
-"coupleUpload"
-);
-
-const couplePreview =
-document.getElementById(
-"couplePreview"
-);
-
-coupleUpload.addEventListener(
-"change",
-function(){
-
-const file = this.files[0];
-
-if(file){
-
-const reader =
-new FileReader();
-
-couplePreview.style.display =
-"block";
-
-reader.addEventListener(
-"load",
-function(){
-
-couplePreview.setAttribute(
-"src",
-this.result
-);
-
-});
-
-reader.readAsDataURL(file);
-
-}
-
-});
-
-</script>
-
 </body>
+
 </html>
