@@ -2,7 +2,9 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
 <title>Happy Birthday Payal 💖</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Pacifico&display=swap" rel="stylesheet">
@@ -21,8 +23,15 @@ html{
 
 body{
     font-family:'Poppins',sans-serif;
-    background:linear-gradient(135deg,#ffd6e7,#f6d7ff,#d7e9ff);
+
+    background:
+    linear-gradient(135deg,
+    #ffd6e7,
+    #f3d7ff,
+    #d7e9ff);
+
     overflow-x:hidden;
+
     color:#ff4f87;
 }
 
@@ -44,16 +53,43 @@ body{
     opacity:0.8;
 }
 
-.hearts span:nth-child(1){left:10%;animation-duration:8s;}
-.hearts span:nth-child(2){left:25%;animation-duration:12s;}
-.hearts span:nth-child(3){left:40%;animation-duration:10s;}
-.hearts span:nth-child(4){left:55%;animation-duration:15s;}
-.hearts span:nth-child(5){left:75%;animation-duration:9s;}
-.hearts span:nth-child(6){left:90%;animation-duration:13s;}
+.hearts span:nth-child(1){
+    left:10%;
+    animation-duration:8s;
+}
+
+.hearts span:nth-child(2){
+    left:25%;
+    animation-duration:12s;
+}
+
+.hearts span:nth-child(3){
+    left:40%;
+    animation-duration:10s;
+}
+
+.hearts span:nth-child(4){
+    left:55%;
+    animation-duration:15s;
+}
+
+.hearts span:nth-child(5){
+    left:75%;
+    animation-duration:9s;
+}
+
+.hearts span:nth-child(6){
+    left:90%;
+    animation-duration:13s;
+}
 
 @keyframes float{
+
     0%{
-        transform:translateY(0) rotate(0deg);
+        transform:
+        translateY(0)
+        rotate(0deg);
+
         opacity:0;
     }
 
@@ -62,28 +98,40 @@ body{
     }
 
     100%{
-        transform:translateY(-120vh) rotate(360deg);
+        transform:
+        translateY(-120vh)
+        rotate(360deg);
+
         opacity:0;
     }
 }
 
-/* HERO SECTION */
+/* HERO */
 
 .hero{
     min-height:100vh;
+
     display:flex;
+
     justify-content:center;
+
     align-items:center;
+
     padding:40px 20px;
 }
 
 .hero-box{
+
     width:100%;
+
     max-width:1200px;
 
     display:grid;
+
     grid-template-columns:1fr 1fr;
+
     gap:50px;
+
     align-items:center;
 }
 
@@ -91,7 +139,8 @@ body{
 
 .left-card{
 
-    background:rgba(255,255,255,0.35);
+    background:
+    rgba(255,255,255,0.35);
 
     backdrop-filter:blur(15px);
 
@@ -99,14 +148,18 @@ body{
 
     border-radius:35px;
 
-    border:2px solid rgba(255,255,255,0.5);
+    border:2px solid
+    rgba(255,255,255,0.5);
 
-    box-shadow:0 20px 40px rgba(255,105,180,0.2);
+    box-shadow:
+    0 20px 40px
+    rgba(255,105,180,0.2);
 
     animation:popup 1s ease;
 }
 
 .tag{
+
     display:inline-block;
 
     background:white;
@@ -120,37 +173,41 @@ body{
     font-weight:600;
 
     margin-bottom:20px;
-
-    box-shadow:0 10px 20px rgba(0,0,0,0.08);
 }
 
 .title{
+
     font-family:'Pacifico',cursive;
 
     font-size:78px;
 
     line-height:1.1;
 
-    color:#ff4f87;
-
     margin-bottom:15px;
 }
 
 .name{
+
     font-size:38px;
+
     font-weight:700;
+
     margin-bottom:15px;
 }
 
 .desc{
+
     font-size:20px;
+
     line-height:1.8;
+
     color:#6f5d70;
 }
 
-/* BIG CAKE */
+/* CAKE */
 
 .cake{
+
     font-size:180px;
 
     text-align:center;
@@ -160,36 +217,23 @@ body{
     animation:bounce 2s infinite;
 
     filter:
-    drop-shadow(0 0 10px #ffffff)
+    drop-shadow(0 0 10px #fff)
     drop-shadow(0 0 25px #9ad9ff)
     drop-shadow(0 0 45px #5abfff);
-
-    position:relative;
-}
-
-.cake::after{
-
-    content:"💙 🤍 💙";
-
-    position:absolute;
-
-    bottom:-25px;
-
-    left:50%;
-
-    transform:translateX(-50%);
-
-    font-size:30px;
 }
 
 /* BUTTON */
 
 .btn{
+
     display:inline-block;
 
     margin-top:35px;
 
-    background:linear-gradient(135deg,#ff4f9a,#ff80c7);
+    background:
+    linear-gradient(135deg,
+    #ff4f9a,
+    #ff80c7);
 
     color:white;
 
@@ -205,11 +249,16 @@ body{
 
     transition:0.3s;
 
-    box-shadow:0 10px 25px rgba(255,79,154,0.3);
+    box-shadow:
+    0 10px 25px
+    rgba(255,79,154,0.3);
 }
 
 .btn:hover{
-    transform:translateY(-6px) scale(1.05);
+
+    transform:
+    translateY(-6px)
+    scale(1.05);
 }
 
 /* IMAGE SECTION */
@@ -221,7 +270,9 @@ body{
 }
 
 .frame{
+
     width:100%;
+
     max-width:430px;
 
     background:white;
@@ -232,15 +283,39 @@ body{
 
     transform:rotate(-3deg);
 
-    box-shadow:0 20px 40px rgba(0,0,0,0.15);
-
-    animation:popup 1.3s ease;
+    box-shadow:
+    0 20px 40px
+    rgba(0,0,0,0.15);
 }
 
 .frame img{
+
     width:100%;
+
     border-radius:18px;
+
     display:block;
+}
+
+input[type="file"]{
+
+    width:100%;
+
+    margin-bottom:15px;
+
+    padding:14px;
+
+    border:none;
+
+    border-radius:15px;
+
+    background:#ffe5f1;
+
+    color:#ff4f87;
+
+    font-weight:600;
+
+    cursor:pointer;
 }
 
 .sticker{
@@ -260,11 +335,9 @@ body{
     font-weight:600;
 
     color:#ff4f87;
-
-    box-shadow:0 10px 25px rgba(0,0,0,0.12);
 }
 
-/* MESSAGE SECTION */
+/* MESSAGE */
 
 .message-section{
     padding:80px 20px;
@@ -276,15 +349,14 @@ body{
 
     margin:auto;
 
-    background:rgba(255,255,255,0.35);
+    background:
+    rgba(255,255,255,0.35);
 
     backdrop-filter:blur(15px);
 
     padding:50px;
 
     border-radius:35px;
-
-    box-shadow:0 20px 40px rgba(255,105,180,0.15);
 }
 
 .message-title{
@@ -299,14 +371,20 @@ body{
 }
 
 .content{
+
     display:grid;
+
     grid-template-columns:320px 1fr;
+
     gap:40px;
+
     align-items:center;
 }
 
 .circle{
+
     width:300px;
+
     height:300px;
 
     border-radius:50%;
@@ -316,13 +394,14 @@ body{
     border:8px solid white;
 
     margin:auto;
-
-    box-shadow:0 10px 30px rgba(255,105,180,0.25);
 }
 
 .circle img{
+
     width:100%;
+
     height:100%;
+
     object-fit:cover;
 }
 
@@ -339,8 +418,6 @@ body{
     line-height:1.8;
 
     color:#6b5b6c;
-
-    box-shadow:0 10px 25px rgba(0,0,0,0.08);
 }
 
 /* REASON CARDS */
@@ -351,7 +428,8 @@ body{
 
     display:grid;
 
-    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    grid-template-columns:
+    repeat(auto-fit,minmax(220px,1fr));
 
     gap:25px;
 }
@@ -367,8 +445,6 @@ body{
     text-align:center;
 
     transition:0.3s;
-
-    box-shadow:0 10px 20px rgba(0,0,0,0.05);
 }
 
 .reason-card:hover{
@@ -376,27 +452,83 @@ body{
 }
 
 .reason-card h3{
+
     font-size:50px;
+
     margin-bottom:15px;
 }
 
-.reason-card p{
-    color:#6f5e70;
-    line-height:1.7;
+/* COUPLE SECTION */
+
+.couple-section{
+
+    padding:80px 20px;
+
+    text-align:center;
+}
+
+.couple-section h2{
+
+    font-size:55px;
+
+    font-family:'Pacifico',cursive;
+
+    margin-bottom:40px;
+}
+
+.couple-box{
+
+    max-width:700px;
+
+    margin:auto;
+
+    background:
+    rgba(255,255,255,0.4);
+
+    padding:35px;
+
+    border-radius:35px;
+
+    backdrop-filter:blur(15px);
+}
+
+#couplePreview{
+
+    width:100%;
+
+    border-radius:25px;
+
+    margin-top:20px;
+
+    display:none;
+}
+
+.couple-box p{
+
+    margin-top:25px;
+
+    font-size:22px;
+
+    color:#6f5d70;
 }
 
 /* FOOTER */
 
 .footer{
+
     text-align:center;
+
     padding:40px 20px;
+
     color:#865a7b;
+
     font-weight:500;
 }
 
-/* ANIMATIONS */
+/* ANIMATION */
 
 @keyframes popup{
+
     0%{
         transform:scale(0.5);
         opacity:0;
@@ -409,6 +541,7 @@ body{
 }
 
 @keyframes bounce{
+
     0%,100%{
         transform:translateY(0);
     }
@@ -465,8 +598,6 @@ body{
 
 <body>
 
-<!-- FLOATING HEARTS -->
-
 <div class="hearts">
     <span>💖</span>
     <span>💕</span>
@@ -476,121 +607,159 @@ body{
     <span>💓</span>
 </div>
 
-<!-- HERO SECTION -->
+<!-- HERO -->
 
 <section class="hero">
 
 <div class="hero-box">
 
-    <!-- LEFT -->
+<div class="left-card">
 
-    <div class="left-card">
+<div class="tag">
+🎀 For Payal
+</div>
 
-        <div class="tag">
-            🎀 For Payal
-        </div>
+<h1 class="title">
+Happy <br> Birthday!
+</h1>
 
-        <h1 class="title">
-            Happy <br> Birthday!
-        </h1>
+<div class="name">
+Payal 💖
+</div>
 
-        <div class="name">
-            Payal 💖
-        </div>
+<p class="desc">
 
-        <p class="desc">
-            Wishing you endless happiness,
-            smiles, beautiful memories
-            and all the good vibes ✨
-        </p>
+Wishing you endless happiness,
+cute memories and beautiful smiles ✨
 
-        <div class="cake">
-            🎂
-        </div>
+</p>
 
-        <a href="#message" class="btn">
-            Open Surprise 🎁
-        </a>
+<div class="cake">
+🎂
+</div>
 
-    </div>
+<a href="#message"
+class="btn">
 
-    <!-- RIGHT IMAGE -->
+Open Surprise 🎁
 
-    <div class="photo-box">
+</a>
 
-        <div class="frame">
+</div>
 
-            <!-- YOUR IMAGE -->
+<!-- RIGHT -->
 
-            <img src="anime-payal.png" alt="Payal">
+<div class="photo-box">
 
-        </div>
+<div class="frame">
 
-        <div class="sticker">
-            ✨ You're Amazing
-        </div>
+<input type="file"
+id="upload1"
+accept="image/*">
 
-    </div>
+<img id="preview1">
+
+</div>
+
+<div class="sticker">
+✨ You're Amazing
+</div>
+
+</div>
 
 </div>
 
 </section>
 
-<!-- MESSAGE SECTION -->
+<!-- MESSAGE -->
 
-<section class="message-section" id="message">
+<section class="message-section"
+id="message">
 
 <div class="message-box">
 
-    <h2 class="message-title">
-        Hey Payal 💖
-    </h2>
+<h2 class="message-title">
+Hey Payal 💖
+</h2>
 
-    <div class="content">
+<div class="content">
 
-        <div class="circle">
+<div class="circle">
 
-            <img src="./anime-payal.png"> alt="Payal">
+<img id="circlePreview">
 
-        </div>
+</div>
 
-        <div class="quote">
+<div class="quote">
 
-            Thank you for being such a sweet and positive person ✨ <br><br>
+Thank you for being such
+a sweet and positive person ✨
 
-            Your smile and your vibe make everything feel lighter and happier 💕 <br><br>
+<br><br>
 
-            Stay happy, keep smiling and always be yourself 🌸
+Your smile makes
+everything feel happier 💕
 
-        </div>
+<br><br>
 
-    </div>
+Stay happy forever 🌸
 
-    <!-- REASON CARDS -->
+</div>
 
-    <div class="reasons">
+</div>
 
-        <div class="reason-card">
-            <h3>💖</h3>
-            <p>Sweet Personality</p>
-        </div>
+<!-- CARDS -->
 
-        <div class="reason-card">
-            <h3>✨</h3>
-            <p>Positive Energy</p>
-        </div>
+<div class="reasons">
 
-        <div class="reason-card">
-            <h3>🌸</h3>
-            <p>Cute Smile</p>
-        </div>
+<div class="reason-card">
+<h3>💖</h3>
+<p>Sweet Personality</p>
+</div>
 
-        <div class="reason-card">
-            <h3>👑</h3>
-            <p>One Of A Kind</p>
-        </div>
+<div class="reason-card">
+<h3>✨</h3>
+<p>Positive Energy</p>
+</div>
 
-    </div>
+<div class="reason-card">
+<h3>🌸</h3>
+<p>Cute Smile</p>
+</div>
+
+<div class="reason-card">
+<h3>👑</h3>
+<p>One Of A Kind</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- COUPLE SECTION -->
+
+<section class="couple-section">
+
+<h2>
+Our Cute Memory 💖
+</h2>
+
+<div class="couple-box">
+
+<input type="file"
+id="coupleUpload"
+accept="image/*">
+
+<img id="BIRTHDAY.jpeg">
+
+<p>
+
+Every moment with you
+feels magical ✨
+
+</p>
 
 </div>
 
@@ -599,8 +768,105 @@ body{
 <!-- FOOTER -->
 
 <div class="footer">
-    Made with 💖 just for Payal
+
+Made with 💖 just for Payal
+
 </div>
+
+<script>
+
+/* FIRST IMAGE */
+
+const upload1 =
+document.getElementById("upload1");
+
+const preview1 =
+document.getElementById("preview1");
+
+const circlePreview =
+document.getElementById("circlePreview");
+
+upload1.addEventListener("change",
+function(){
+
+const file = this.files[0];
+
+if(file){
+
+const reader =
+new FileReader();
+
+preview1.style.display =
+"block";
+
+circlePreview.style.display =
+"block";
+
+reader.addEventListener("load",
+function(){
+
+preview1.setAttribute(
+"src",
+this.result
+);
+
+circlePreview.setAttribute(
+"src",
+this.result
+);
+
+});
+
+reader.readAsDataURL(file);
+
+}
+
+});
+
+/* COUPLE IMAGE */
+
+const coupleUpload =
+document.getElementById(
+"coupleUpload"
+);
+
+const couplePreview =
+document.getElementById(
+"couplePreview"
+);
+
+coupleUpload.addEventListener(
+"change",
+function(){
+
+const file = this.files[0];
+
+if(file){
+
+const reader =
+new FileReader();
+
+couplePreview.style.display =
+"block";
+
+reader.addEventListener(
+"load",
+function(){
+
+couplePreview.setAttribute(
+"src",
+this.result
+);
+
+});
+
+reader.readAsDataURL(file);
+
+}
+
+});
+
+</script>
 
 </body>
 </html>
