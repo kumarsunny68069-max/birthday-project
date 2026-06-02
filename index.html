@@ -1,1139 +1,507 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
-<meta charset="UTF-8">
-
-<meta name="viewport"
-content="width=device-width, initial-scale=1.0">
-
-<title>Happy Birthday Payal 💖</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Pacifico&display=swap" rel="stylesheet">
-
-<style>
-
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-}
-
-html{
-scroll-behavior:smooth;
-}
-
-body{
-
-font-family:'Poppins',sans-serif;
-
-background:
-linear-gradient(135deg,
-#ffd6e7,
-#efd7ff,
-#d7e9ff);
-
-overflow-x:hidden;
-
-color:#ff4f87;
-}
-
-/* HEARTS */
-
-.hearts{
-
-position:fixed;
-
-width:100%;
-
-height:100%;
-
-overflow:hidden;
-
-z-index:-1;
-}
-
-.hearts span{
-
-position:absolute;
-
-bottom:-100px;
-
-font-size:28px;
-
-animation:float 12s linear infinite;
-
-opacity:0.8;
-}
-
-.hearts span:nth-child(1){
-left:10%;
-animation-duration:8s;
-}
-
-.hearts span:nth-child(2){
-left:25%;
-animation-duration:12s;
-}
-
-.hearts span:nth-child(3){
-left:40%;
-animation-duration:10s;
-}
-
-.hearts span:nth-child(4){
-left:55%;
-animation-duration:15s;
-}
-
-.hearts span:nth-child(5){
-left:75%;
-animation-duration:9s;
-}
-
-.hearts span:nth-child(6){
-left:90%;
-animation-duration:13s;
-}
-
-@keyframes float{
-
-0%{
-transform:
-translateY(0)
-rotate(0deg);
-
-opacity:0;
-}
-
-20%{
-opacity:1;
-}
-
-100%{
-transform:
-translateY(-120vh)
-rotate(360deg);
-
-opacity:0;
-}
-}
-
-/* HERO */
-
-.hero{
-
-min-height:100vh;
-
-display:flex;
-
-justify-content:center;
-
-align-items:center;
-
-padding:40px 20px;
-}
-
-.hero-box{
-
-width:100%;
-
-max-width:1200px;
-
-display:grid;
-
-grid-template-columns:1fr 1fr;
-
-gap:50px;
-
-align-items:center;
-}
-
-/* LEFT */
-
-.left-card{
-
-background:
-rgba(255,255,255,0.35);
-
-backdrop-filter:blur(15px);
-
-padding:45px;
-
-border-radius:35px;
-
-border:2px solid
-rgba(255,255,255,0.5);
-
-box-shadow:
-0 20px 40px
-rgba(255,105,180,0.2);
-
-animation:popup 1s ease;
-}
-
-.tag{
-
-display:inline-block;
-
-background:white;
-
-color:#ff4f87;
-
-padding:12px 22px;
-
-border-radius:50px;
-
-font-weight:600;
-
-margin-bottom:20px;
-}
-
-.title{
-
-font-family:'Pacifico',cursive;
-
-font-size:78px;
-
-line-height:1.1;
-
-margin-bottom:15px;
-}
-
-.name{
-
-font-size:38px;
-
-font-weight:700;
-
-margin-bottom:15px;
-}
-
-.desc{
-
-font-size:20px;
-
-line-height:1.8;
-
-color:#6f5d70;
-}
-
-/* CAKE */
-
-.cake{
-
-font-size:180px;
-
-text-align:center;
-
-margin:30px 0;
-
-animation:bounce 2s infinite;
-
-filter:
-drop-shadow(0 0 10px #fff)
-drop-shadow(0 0 25px #9ad9ff)
-drop-shadow(0 0 45px #5abfff);
-}
-
-/* BUTTON */
-
-.btn{
-
-display:inline-block;
-
-margin-top:35px;
-
-background:
-linear-gradient(135deg,
-#ff4f9a,
-#ff80c7);
-
-color:white;
-
-text-decoration:none;
-
-padding:16px 34px;
-
-border-radius:50px;
-
-font-size:18px;
-
-font-weight:600;
-
-transition:0.3s;
-
-animation:glow 2s infinite;
-
-box-shadow:
-0 10px 25px
-rgba(255,79,154,0.3);
-}
-
-.btn:hover{
-
-transform:
-translateY(-6px)
-scale(1.05);
-}
-
-/* IMAGE */
-
-.photo-box{
-
-display:flex;
-
-justify-content:center;
-
-position:relative;
-}
-
-.frame{
-
-width:100%;
-
-max-width:430px;
-
-background:white;
-
-padding:18px;
-
-border-radius:25px;
-
-transform:rotate(-3deg);
-
-box-shadow:
-0 20px 40px
-rgba(0,0,0,0.15);
-
-animation:popup 1.3s ease;
-
-transition:0.4s;
-}
-
-.frame:hover{
-
-transform:scale(1.03);
-
-box-shadow:
-0 0 20px #fff,
-0 0 40px #ff9ad5,
-0 0 70px #ff69b4;
-}
-
-.frame img{
-
-width:100%;
-
-border-radius:18px;
-
-display:block;
-}
-
-.sticker{
-
-position:absolute;
-
-bottom:-15px;
-
-right:20px;
-
-background:white;
-
-padding:12px 20px;
-
-border-radius:20px;
-
-font-weight:600;
-
-color:#ff4f87;
-}
-
-/* MESSAGE */
-
-.message-section{
-padding:80px 20px;
-}
-
-.message-box{
-
-max-width:1150px;
-
-margin:auto;
-
-background:
-rgba(255,255,255,0.35);
-
-backdrop-filter:blur(15px);
-
-padding:50px;
-
-border-radius:35px;
-
-box-shadow:
-0 20px 40px
-rgba(255,105,180,0.15);
-}
-
-.message-title{
-
-text-align:center;
-
-font-family:'Pacifico',cursive;
-
-font-size:60px;
-
-margin-bottom:40px;
-}
-
-.content{
-
-display:grid;
-
-grid-template-columns:320px 1fr;
-
-gap:40px;
-
-align-items:center;
-}
-
-.circle{
-
-width:300px;
-
-height:300px;
-
-border-radius:50%;
-
-overflow:hidden;
-
-border:8px solid white;
-
-margin:auto;
-
-transition:0.4s;
-
-box-shadow:
-0 10px 30px
-rgba(255,105,180,0.25);
-}
-
-.circle:hover{
-
-transform:scale(1.03);
-
-box-shadow:
-0 0 20px #fff,
-0 0 40px #ff9ad5,
-0 0 70px #ff69b4;
-}
-
-.circle img{
-
-width:100%;
-
-height:100%;
-
-object-fit:cover;
-}
-
-.quote{
-
-background:white;
-
-padding:40px;
-
-border-radius:30px;
-
-font-size:22px;
-
-line-height:1.8;
-
-color:#6b5b6c;
-}
-
-/* REASONS */
-
-.reasons{
-
-margin-top:60px;
-
-display:grid;
-
-grid-template-columns:
-repeat(auto-fit,minmax(220px,1fr));
-
-gap:25px;
-}
-
-.reason-card{
-
-background:white;
-
-padding:35px 25px;
-
-border-radius:30px;
-
-text-align:center;
-
-transition:0.3s;
-
-box-shadow:
-0 10px 20px
-rgba(0,0,0,0.05);
-}
-
-.reason-card:hover{
-transform:translateY(-10px);
-}
-
-.reason-card h3{
-
-font-size:50px;
-
-margin-bottom:15px;
-}
-
-/* COUPLE SECTION */
-
-.couple-section{
-
-padding:80px 20px;
-
-text-align:center;
-}
-
-.couple-section h2{
-
-font-size:55px;
-
-font-family:'Pacifico',cursive;
-
-margin-bottom:40px;
-}
-
-.couple-box{
-
-max-width:700px;
-
-margin:auto;
-
-background:
-rgba(255,255,255,0.4);
-
-padding:35px;
-
-border-radius:35px;
-
-backdrop-filter:blur(15px);
-
-box-shadow:
-0 15px 35px
-rgba(255,105,180,0.15);
-}
-
-.couple-img{
-
-width:100%;
-
-border-radius:25px;
-
-margin-top:20px;
-
-transition:0.4s;
-
-box-shadow:
-0 15px 35px
-rgba(255,105,180,0.2);
-}
-
-.couple-img:hover{
-
-transform:scale(1.03);
-
-box-shadow:
-0 0 20px #fff,
-0 0 40px #ff9ad5,
-0 0 70px #ff69b4;
-}
-
-.couple-box p{
-
-margin-top:25px;
-
-font-size:22px;
-
-color:#6f5d70;
-}
-
-/* GALLERY */
-
-.gallery-section{
-
-padding:90px 20px;
-
-text-align:center;
-}
-
-.gallery-title{
-
-font-size:55px;
-
-font-family:'Pacifico',cursive;
-
-margin-bottom:50px;
-}
-
-.gallery{
-
-display:grid;
-
-grid-template-columns:
-repeat(auto-fit,minmax(240px,1fr));
-
-gap:25px;
-
-max-width:1200px;
-
-margin:auto;
-}
-
-.gallery-card{
-
-background:white;
-
-padding:15px;
-
-border-radius:30px;
-
-overflow:hidden;
-
-transition:0.4s;
-
-box-shadow:
-0 15px 35px
-rgba(0,0,0,0.1);
-
-animation:floatCard 4s ease-in-out infinite;
-}
-
-.gallery-card:hover{
-
-transform:
-translateY(-12px)
-scale(1.03);
-}
-
-.gallery-card img{
-
-width:100%;
-
-height:320px;
-
-object-fit:cover;
-
-border-radius:20px;
-}
-
-/* LOVE PAGE */
-
-.love-page{
-
-padding:90px 20px;
-
-text-align:center;
-}
-
-.love-page h2{
-
-font-size:55px;
-
-font-family:'Pacifico',cursive;
-
-margin-bottom:50px;
-}
-
-.love-container{
-
-max-width:1100px;
-
-margin:auto;
-
-display:grid;
-
-grid-template-columns:
-repeat(auto-fit,minmax(240px,1fr));
-
-gap:25px;
-}
-
-.love-card{
-
-background:
-rgba(255,255,255,0.45);
-
-backdrop-filter:blur(15px);
-
-padding:40px 30px;
-
-border-radius:30px;
-
-font-size:22px;
-
-font-weight:600;
-
-color:#ff4f87;
-
-transition:0.4s;
-
-box-shadow:
-0 15px 30px
-rgba(255,105,180,0.15);
-}
-
-.love-card:hover{
-
-transform:
-translateY(-10px)
-rotate(-2deg);
-
-background:white;
-}
-
-/* FINAL PAGE */
-
-.final-page{
-
-padding:100px 20px;
-}
-
-.final-box{
-
-max-width:900px;
-
-margin:auto;
-
-background:
-rgba(255,255,255,0.4);
-
-padding:60px;
-
-border-radius:40px;
-
-text-align:center;
-
-backdrop-filter:blur(15px);
-
-box-shadow:
-0 20px 40px
-rgba(255,105,180,0.15);
-
-animation:popup 1s ease;
-}
-
-.final-box h2{
-
-font-size:55px;
-
-font-family:'Pacifico',cursive;
-
-margin-bottom:30px;
-}
-
-.final-box p{
-
-font-size:24px;
-
-line-height:2;
-
-color:#6f5d70;
-}
-
-/* FOOTER */
-
-.footer{
-
-text-align:center;
-
-padding:40px 20px;
-
-color:#865a7b;
-
-font-weight:500;
-}
-
-/* ANIMATION */
-
-@keyframes popup{
-
-0%{
-transform:scale(0.5);
-opacity:0;
-}
-
-100%{
-transform:scale(1);
-opacity:1;
-}
-}
-
-@keyframes bounce{
-
-0%,100%{
-transform:translateY(0);
-}
-
-50%{
-transform:translateY(-15px);
-}
-}
-
-@keyframes floatCard{
-
-0%,100%{
-transform:translateY(0px);
-}
-
-50%{
-transform:translateY(-10px);
-}
-}
-
-@keyframes glow{
-
-0%{
-box-shadow:
-0 0 10px #ff8bc2;
-}
-
-50%{
-box-shadow:
-0 0 30px #ff4f9a;
-}
-
-100%{
-box-shadow:
-0 0 10px #ff8bc2;
-}
-}
-
-/* MOBILE */
-
-@media(max-width:900px){
-
-.hero-box{
-grid-template-columns:1fr;
-}
-
-.title{
-font-size:58px;
-}
-
-.message-title{
-font-size:45px;
-}
-
-.content{
-grid-template-columns:1fr;
-}
-
-.circle{
-width:250px;
-height:250px;
-}
-
-.quote{
-font-size:18px;
-}
-
-.cake{
-font-size:130px;
-}
-
-.left-card{
-padding:30px 25px;
-}
-
-.message-box{
-padding:35px 20px;
-}
-
-.gallery-title,
-.love-page h2,
-.final-box h2,
-.couple-section h2{
-font-size:40px;
-}
-
-.final-box p{
-font-size:19px;
-}
-}
-
-</style>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A magical, interactive birthday surprise website made especially for Payal, filled with sweet messages, a cute memory gallery, and fun games.">
+    <title>Happy Birthday Payal 💖 | Magical Surprise</title>
+    
+    <!-- Google Fonts: Poppins & Pacifico & Playfair Display (for high-contrast elegant headings) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Pacifico&family=Playfair+Display:ital,wght@0,600;1,400&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome Icons for modern interactive dashboard -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Stylesheet at root level -->
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-<div class="hearts">
-
-<span>💖</span>
-<span>💕</span>
-<span>💗</span>
-<span>💞</span>
-<span>✨</span>
-<span>💓</span>
-
-</div>
-
-<!-- HERO -->
-
-<section class="hero">
-
-<div class="hero-box">
-
-<div class="left-card">
-
-<div class="tag">
-🎀 For Payal
-</div>
-
-<h1 class="title">
-Happy <br> Birthday!
-</h1>
-
-<div class="name">
-Payal 💖
-</div>
-
-<p class="desc">
-
-Wishing you endless happiness,
-cute memories and beautiful smiles ✨
-
-</p>
-
-<div class="cake">
-🎂
-</div>
-
-<a href="#message"
-class="btn">
-
-Open Surprise 🎁
-
-</a>
-
-</div>
-
-<div class="photo-box">
-
-<div class="frame">
-
-<img src="7.png"
-alt="Payal">
-
-</div>
-
-<div class="sticker">
-✨ You're Amazing
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- MESSAGE -->
-
-<section class="message-section"
-id="message">
-
-<div class="message-box">
-
-<h2 class="message-title">
-Hey Payal 💖
-</h2>
-
-<div class="content">
-
-<div class="circle">
-
-<img src="anime-payal.png"
-alt="Payal">
-
-</div>
-
-<div class="quote">
-
-Thank you for being such
-a sweet and positive person ✨
-
-<br><br>
-
-Your smile makes everything
-feel happier and brighter 💕
-
-<br><br>
-
-Stay happy forever 🌸
-
-</div>
-
-</div>
-
-<div class="reasons">
-
-<div class="reason-card">
-<h3>💖</h3>
-<p>Sweet Personality</p>
-</div>
-
-<div class="reason-card">
-<h3>✨</h3>
-<p>Positive Energy</p>
-</div>
-
-<div class="reason-card">
-<h3>🌸</h3>
-<p>Cute Smile</p>
-</div>
-
-<div class="reason-card">
-<h3>👑</h3>
-<p>One Of A Kind</p>
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- COUPLE SECTION -->
-
-<section class="couple-section">
-
-<h2>
-Our Cute Memory 💖
-</h2>
-
-<div class="couple-box">
-
-<img src="BIRTHDAY.jpeg"
-class="couple-img">
-
-<p>
-
-Every moment with you
-feels magical ✨
-
-</p>
-
-</div>
-
-</section>
-
-<!-- GALLERY -->
-
-<section class="gallery-section">
-
-<h2 class="gallery-title">
-Cute Memories Gallery 💕
-</h2>
-
-<div class="gallery">
-
-<div class="gallery-card">
-<img src="3.png" alt="">
-</div>
-
-<div class="gallery-card">
-<img src="4.png" alt="">
-</div>
-
-<div class="gallery-card">
-<img src="5.png" alt="">
-</div>
-
-<div class="gallery-card">
-<img src="6.png" alt="">
-</div>
-
-</div>
-
-</section>
-
-<!-- LOVE PAGE -->
-
-<section class="love-page">
-
-<h2>
-Why You're Special 💖
-</h2>
-
-<div class="love-container">
-
-<div class="love-card">
-✨ Your smile lights up everything
-</div>
-
-<div class="love-card">
-🌸 Your vibe is pure happiness
-</div>
-
-<div class="love-card">
-💖 You make memories beautiful
-</div>
-
-<div class="love-card">
-🎀 You're genuinely adorable
-</div>
-
-</div>
-
-</section>
-
-<!-- FINAL PAGE -->
-
-<section class="final-page">
-
-<div class="final-box">
-
-<h2>
-A Small Message For You 💌
-</h2>
-
-<p>
-
-No matter what happens,
-always keep smiling and shining ✨
-
-<br><br>
-
-You deserve all happiness,
-love and beautiful moments 💕
-
-<br><br>
-
-Happy Birthday Again Payal 🎂💖
-
-</p>
-
-</div>
-
-</section>
-
-<!-- FOOTER -->
-
-<div class="footer">
-
-Made with 💖 just for Payal
-
-</div>
-
+    <!-- 3D WebGL Background Canvas -->
+    <canvas id="webgl-bg"></canvas>
+
+    <!-- Floating Background Particles Container -->
+    <div class="particles-container" id="particles-container"></div>
+    <div class="hearts" id="hearts-bg">
+        <span>💖</span>
+        <span>💕</span>
+        <span>💗</span>
+        <span>💞</span>
+        <span>✨</span>
+        <span>💓</span>
+    </div>
+
+    <!-- Music Player Widget -->
+    <div class="music-widget glass-panel" id="music-widget">
+        <button class="music-btn" id="music-play-btn" aria-label="Play Music">
+            <i class="fas fa-play" id="music-icon"></i>
+        </button>
+        <div class="music-info">
+            <span class="music-title">Payal's Birthday Chime</span>
+            <div class="music-visualizer" id="visualizer">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Floating Pop Game Widget (Score Tracker) -->
+    <div class="pop-score-widget glass-panel" id="pop-score-widget">
+        <span class="pop-title"><i class="fas fa-balloon"></i> Balloon Pop:</span>
+        <span id="pop-score">0</span>
+    </div>
+
+    <!-- MAIN PAGE WRAPPER -->
+    <main>
+
+        <!-- HERO SECTION -->
+        <section class="hero" id="hero-sec">
+            <div class="hero-box">
+                <!-- Left Details Card -->
+                <div class="left-card glass-panel" id="hero-left-card">
+                    <div class="tag">
+                        <i class="fas fa-gift"></i> For Payal
+                    </div>
+                    <h1 class="title">Happy <br><span class="text-gradient">Birthday!</span></h1>
+                    <div class="name">Payal 💖</div>
+                    <p class="desc">
+                        Wishing you endless happiness, beautiful memories, and a smile that lights up the entire world! ✨
+                    </p>
+                    
+                    <!-- Cake Container with Interactive Candles -->
+                    <div class="cake-wrapper">
+                        <div class="cake" id="birthday-cake">
+                            <div class="candle-holder">
+                                <div class="candle" id="candle-1">
+                                    <div class="flame"></div>
+                                </div>
+                                <div class="candle" id="candle-2">
+                                    <div class="flame"></div>
+                                </div>
+                                <div class="candle" id="candle-3">
+                                    <div class="flame"></div>
+                                </div>
+                            </div>
+                            <div class="frosting"></div>
+                            <div class="cake-layer cake-layer-top"></div>
+                            <div class="cake-layer cake-layer-middle"></div>
+                            <div class="cake-layer cake-layer-bottom"></div>
+                            <div class="cake-stand"></div>
+                        </div>
+                    </div>
+
+                    <div class="cake-controls">
+                        <button id="blow-btn" class="btn btn-blow"><i class="fa-solid fa-wind"></i> Blow Candles 🌬️</button>
+                    </div>
+
+                    <a href="#message" class="btn btn-scroll">Open Surprise 🎁</a>
+                </div>
+
+                <!-- Right Photo Card -->
+                <div class="photo-box" id="hero-photo-box">
+                    <div class="frame image-fallback-wrapper" data-fallback-label="Payal's Portrait 🎀">
+                        <img src="7.png" alt="Payal" onerror="this.style.display='none'; this.parentElement.classList.add('show-fallback');">
+                        <div class="fallback-glow-elements">
+                            <i class="fas fa-heart floating-element"></i>
+                            <i class="fas fa-star floating-element"></i>
+                        </div>
+                    </div>
+                    <div class="sticker">
+                        ✨ You're Amazing
+                    </div>
+                </div>
+            </div>
+            
+            <div class="scroll-down-indicator">
+                <span class="arrow-down"></span>
+                <span class="scroll-down-text">Scroll to explore the magic</span>
+            </div>
+        </section>
+
+        <!-- MESSAGE SECTION -->
+        <section class="message-section" id="message">
+            <div class="message-box glass-panel">
+                <h2 class="message-title">Hey Payal 💖</h2>
+                
+                <div class="content">
+                    <div class="circle image-fallback-wrapper" data-fallback-label="Payal ✨">
+                        <img src="anime-payal.png" alt="Payal" onerror="this.style.display='none'; this.parentElement.classList.add('show-fallback');">
+                    </div>
+                    
+                    <div class="quote-wrapper">
+                        <i class="fas fa-quote-left quote-icon-start"></i>
+                        <div class="quote">
+                            Thank you for being such a sweet and positive person. ✨
+                            <br><br>
+                            Your smile makes everything feel happier and brighter. 💕
+                            <br><br>
+                            Stay happy forever! 🌸
+                        </div>
+                        <i class="fas fa-quote-right quote-icon-end"></i>
+                    </div>
+                </div>
+
+                <!-- Reasons Widget Grid -->
+                <div class="reasons">
+                    <div class="reason-card glass-panel-light">
+                        <div class="reason-icon">💖</div>
+                        <h3>Sweet Vibe</h3>
+                        <p>Your gentle nature brings comfort to everyone around you.</p>
+                    </div>
+                    <div class="reason-card glass-panel-light">
+                        <div class="reason-icon">✨</div>
+                        <h3>Positive Energy</h3>
+                        <p>You carry a light that dispels any negative clouds.</p>
+                    </div>
+                    <div class="reason-card glass-panel-light">
+                        <div class="reason-icon">🌸</div>
+                        <h3>Cute Smile</h3>
+                        <p>A smile so bright it literally can cure any bad mood!</p>
+                    </div>
+                    <div class="reason-card glass-panel-light">
+                        <div class="reason-icon">👑</div>
+                        <h3>One Of A Kind</h3>
+                        <p>There's absolutely nobody else in the universe like you.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- VIBE CHECK / TRIVIA GAME SECTION -->
+        <section class="quiz-section" id="quiz">
+            <div class="quiz-box glass-panel">
+                <h2 class="quiz-title">Friendship Vibe Check ⚡</h2>
+                <p class="quiz-subtitle">How well do you know Payal? Complete this short quiz to unlock a secret message!</p>
+                
+                <div class="quiz-container">
+                    <div class="quiz-card active" id="q1" data-step="1">
+                        <span class="q-progress">Question 1 of 4</span>
+                        <h3>What is Payal's absolute superpower?</h3>
+                        <div class="quiz-options">
+                            <button class="option-btn" data-correct="true">Spreading instant happiness 💖</button>
+                            <button class="option-btn" data-correct="false">Reading mind waves 🧠</button>
+                            <button class="option-btn" data-correct="false">Eating infinite chocolate 🍫</button>
+                            <button class="option-btn" data-correct="false">Sleeping with eyes open 😴</button>
+                        </div>
+                    </div>
+                    
+                    <div class="quiz-card" id="q2" data-step="2">
+                        <span class="q-progress">Question 2 of 4</span>
+                        <h3>What description fits Payal perfectly?</h3>
+                        <div class="quiz-options">
+                            <button class="option-btn" data-correct="false">Strict & Serious Leader 👮‍♀️</button>
+                            <button class="option-btn" data-correct="true">Genuinely sweet & positive 🌸</button>
+                            <button class="option-btn" data-correct="false">Lazy couch potato 🥔</button>
+                            <button class="option-btn" data-correct="false">Sarcastic chatterbox 🎙️</button>
+                        </div>
+                    </div>
+                    
+                    <div class="quiz-card" id="q3" data-step="3">
+                        <span class="q-progress">Question 3 of 4</span>
+                        <h3>If Payal were a season, she would be...</h3>
+                        <div class="quiz-options">
+                            <button class="option-btn" data-correct="false">Freezing Cold Winter ❄️</button>
+                            <button class="option-btn" data-correct="false">Scorching Hot Summer ☀️</button>
+                            <button class="option-btn" data-correct="true">Vibrant & Sunny Spring 🌺</button>
+                            <button class="option-btn" data-correct="false">Spooky Autumn 🍂</button>
+                        </div>
+                    </div>
+
+                    <div class="quiz-card" id="q4" data-step="4">
+                        <span class="q-progress">Question 4 of 4</span>
+                        <h3>What nickname does she love to call you? 🤫</h3>
+                        <div class="quiz-options">
+                            <button class="option-btn" data-correct="false">Mr. Apple 🍎</button>
+                            <button class="option-btn" data-correct="true">Pineapple 🍍</button>
+                            <button class="option-btn" data-correct="false">Mango King 🥭</button>
+                            <button class="option-btn" data-correct="false">Banana Bro 🍌</button>
+                        </div>
+                    </div>
+
+                    <!-- Secret Reward (Hidden initially) -->
+                    <div class="quiz-reward" id="quiz-success-card">
+                        <div class="reward-icon"><i class="fas fa-trophy"></i></div>
+                        <h3>4/4 Score! Vibe Match: 100%</h3>
+                        <p>You know Payal perfectly! Here is your special reward voucher code:</p>
+                        <div class="voucher-code" id="voucher">VIBE-PAYAL-BESTIE</div>
+                        <button class="btn btn-claim" id="claim-gift-btn">Claim Bestie Gift 🎁</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CUTE MEMORY SECTION -->
+        <section class="couple-section">
+            <h2>Our Cute Memory 💖</h2>
+            <div class="couple-box glass-panel">
+                <div class="couple-img-wrapper image-fallback-wrapper" data-fallback-label="Special Memory 📸">
+                    <img src="BIRTHDAY.jpeg" alt="Memory Frame" class="couple-img" onerror="this.style.display='none'; this.parentElement.classList.add('show-fallback');">
+                </div>
+                <p>Every single moment spent with you feels magical and pure ✨</p>
+            </div>
+        </section>
+
+        <!-- POLAROID GALLERY SECTION -->
+        <section class="gallery-section">
+            <h2 class="gallery-title">Cute Memories Gallery 💕</h2>
+            
+            <div class="gallery-container">
+                <div class="gallery">
+                    <!-- Polaroid Card 1 -->
+                    <div class="gallery-card polaroid" id="pol-1">
+                        <div class="pin"></div>
+                        <div class="polaroid-inner">
+                            <div class="polaroid-front">
+                                <div class="polaroid-img-wrapper image-fallback-wrapper" data-fallback-label="Memory #1 🌟">
+                                    <img src="3.png" alt="Memory 1" onerror="this.style.display='none'; this.parentElement.classList.add('show-fallback');">
+                                </div>
+                                <div class="caption">Sweet Times 🎂</div>
+                            </div>
+                            <div class="polaroid-back">
+                                <div class="polaroid-back-content">
+                                    <i class="fas fa-heart back-heart"></i>
+                                    <p>Remember this day? The cake was delicious, but your laugh was the highlight! 🎂✨</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Polaroid Card 2 -->
+                    <div class="gallery-card polaroid" id="pol-2">
+                        <div class="pin"></div>
+                        <div class="polaroid-inner">
+                            <div class="polaroid-front">
+                                <div class="polaroid-img-wrapper image-fallback-wrapper" data-fallback-label="Memory #2 🌸">
+                                    <img src="4.png" alt="Memory 2" onerror="this.style.display='none'; this.parentElement.classList.add('show-fallback');">
+                                </div>
+                                <div class="caption">Cute Smiles ✨</div>
+                            </div>
+                            <div class="polaroid-back">
+                                <div class="polaroid-back-content">
+                                    <i class="fas fa-star back-heart" style="color: #ffb300;"></i>
+                                    <p>Your smile in this picture is literally my favorite thing in the world. Keep smiling always! 🌸</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Polaroid Card 3 -->
+                    <div class="gallery-card polaroid" id="pol-3">
+                        <div class="pin"></div>
+                        <div class="polaroid-inner">
+                            <div class="polaroid-front">
+                                <div class="polaroid-img-wrapper image-fallback-wrapper" data-fallback-label="Memory #3 🎈">
+                                    <img src="5.png" alt="Memory 3" onerror="this.style.display='none'; this.parentElement.classList.add('show-fallback');">
+                                </div>
+                                <div class="caption">Unforgettable Days 💖</div>
+                            </div>
+                            <div class="polaroid-back">
+                                <div class="polaroid-back-content">
+                                    <i class="fas fa-candy-cane back-heart" style="color: #c586ff;"></i>
+                                    <p>A day filled with crazy jokes and endless gossip. Can we repeat this soon? 💖</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Polaroid Card 4 -->
+                    <div class="gallery-card polaroid" id="pol-4">
+                        <div class="pin"></div>
+                        <div class="polaroid-inner">
+                            <div class="polaroid-front">
+                                <div class="polaroid-img-wrapper image-fallback-wrapper" data-fallback-label="Memory #4 💕">
+                                    <img src="6.png" alt="Memory 4" onerror="this.style.display='none'; this.parentElement.classList.add('show-fallback');">
+                                </div>
+                                <div class="caption">Best Vibe Together 🎀</div>
+                            </div>
+                            <div class="polaroid-back">
+                                <div class="polaroid-back-content">
+                                    <i class="fas fa-pineapple back-heart" style="color: #ffa000;"></i>
+                                    <p>No matter where we are, our vibe matches 100%. Dedicated to the best Pineapple! 🍍🎀</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- LOVE / WHY YOU'RE SPECIAL (SCRATCH CARDS) SECTION -->
+        <section class="love-page" id="scratch-sec">
+            <h2>Why You're Special 💖</h2>
+            <p class="scratch-instruction"><i class="fa-solid fa-hand-pointer"></i> Scratch the metallic heart covers to reveal Payal's traits!</p>
+            
+            <div class="love-container">
+                <!-- Card 1 -->
+                <div class="love-card-wrapper">
+                    <div class="love-card glass-panel">
+                        <div class="scratch-area">
+                            <canvas class="scratch-canvas" data-text="Your smile lights up everything 🌟"></canvas>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Card 2 -->
+                <div class="love-card-wrapper">
+                    <div class="love-card glass-panel">
+                        <div class="scratch-area">
+                            <canvas class="scratch-canvas" data-text="Your vibe is pure happiness 🌸"></canvas>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Card 3 -->
+                <div class="love-card-wrapper">
+                    <div class="love-card glass-panel">
+                        <div class="scratch-area">
+                            <canvas class="scratch-canvas" data-text="You make memories beautiful 💖"></canvas>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Card 4 -->
+                <div class="love-card-wrapper">
+                    <div class="love-card glass-panel">
+                        <div class="scratch-area">
+                            <canvas class="scratch-canvas" data-text="You're genuinely adorable 🎀"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FINAL SURPRISE CARD / MESSAGE -->
+        <section class="final-page">
+            <div class="final-box glass-panel" id="final-wish-box">
+                <div class="celebration-ribbon"><i class="fas fa-gift"></i> Special Wishes</div>
+                <h2>A Small Message For You 💌</h2>
+                
+                <p class="final-message">
+                    No matter what happens, always keep smiling and shining! ✨
+                    <br><br>
+                    You deserve all the happiness, love, and beautiful moments in life. 💕
+                    <br><br>
+                    <strong>Happy Birthday Again, Payal! 🎂💖</strong>
+                </p>
+
+                <!-- Custom Gift Box animation trigger -->
+                <div class="gift-box-wrapper">
+                    <div class="gift-box" id="interact-gift-box">
+                        <div class="gift-lid"></div>
+                        <div class="gift-ribbon-vertical"></div>
+                        <div class="gift-ribbon-horizontal"></div>
+                        <div class="gift-main"></div>
+                    </div>
+                </div>
+                <span class="gift-hint">Click the gift box to unwrap your special surprise! 🎁</span>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- LIGHTBOX / IMAGE PREVIEW MODAL -->
+    <div class="lightbox" id="lightbox">
+        <button class="lightbox-close" id="lightbox-close-btn" aria-label="Close image"><i class="fas fa-times"></i></button>
+        <div class="lightbox-content">
+            <img src="" alt="Zoomed view" id="lightbox-img">
+            <div class="lightbox-caption" id="lightbox-caption">Caption</div>
+        </div>
+    </div>
+
+    <!-- POPUP MODAL FOR VIRTUAL LETTER (Claim gift) -->
+    <div class="letter-modal-overlay" id="letter-modal-overlay">
+        <div class="letter-modal glass-panel">
+            <button class="letter-close" id="letter-close-btn"><i class="fas fa-times"></i></button>
+            <div class="letter-stamp"><i class="fas fa-heart"></i></div>
+            <h2>A Magical Letter for You 📜</h2>
+            <div class="letter-body">
+                <p>Dear Payal,</p>
+                <p>On this beautiful day, I want to tell you how incredibly special you are. Your laughter brings light, your sweet words bring peace, and your support is a constant source of joy. 🌟</p>
+                <p>May your path be always filled with blooming flowers, positive vibes, and people who appreciate you as much as you deserve. Keep dreaming big, keep shining, and never let that beautiful smile fade! 💖</p>
+                <p>Happy Birthday, Bestie! 🎉</p>
+                <p class="signature">— From your dear friend 🧸</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- POPUP MODAL FOR THE FINAL SURPRISE GIFT (Wishing Jar & Star Certificate) -->
+    <div class="gift-modal-overlay" id="gift-modal-overlay">
+        <div class="gift-modal glass-panel">
+            <button class="gift-modal-close" id="gift-modal-close-btn" aria-label="Close gift"><i class="fas fa-times"></i></button>
+            <div class="gift-modal-header" id="gift-header-sec">
+                <h2>A Magical Jar of Memories & Wishes ✨🏺</h2>
+                <p>Click and release the floating stars inside the jar to unlock a special surprise!</p>
+            </div>
+            
+            <div class="jar-interactive-container" id="jar-container-sec">
+                <!-- CSS Glowing Wish Jar -->
+                <div class="wishing-jar-wrapper">
+                    <div class="wishing-jar" id="wishing-jar">
+                        <div class="jar-lid"></div>
+                        <div class="jar-neck"></div>
+                        <div class="jar-body">
+                            <!-- Floating Star Fireflies -->
+                            <button class="firefly-star" id="firefly-1" onclick="releaseFirefly(1)" aria-label="Release Star 1">⭐</button>
+                            <button class="firefly-star" id="firefly-2" onclick="releaseFirefly(2)" aria-label="Release Star 2">⭐</button>
+                            <button class="firefly-star" id="firefly-3" onclick="releaseFirefly(3)" aria-label="Release Star 3">⭐</button>
+                            <button class="firefly-star" id="firefly-4" onclick="releaseFirefly(4)" aria-label="Release Star 4">⭐</button>
+                            <button class="firefly-star" id="firefly-5" onclick="releaseFirefly(5)" aria-label="Release Star 5">⭐</button>
+                        </div>
+                        <div class="jar-glow-halo"></div>
+                    </div>
+                </div>
+
+                <!-- Star Card Display Area -->
+                <div class="star-card-display" id="star-card-display">
+                    <div class="star-card-placeholder">
+                        <i class="fas fa-wand-magic-sparkles magic-icon"></i>
+                        <p>Click a star inside the jar to release a secret memory! 🌟</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Secret Best Friend Lifetime Certificate (Hidden initially) -->
+            <div class="bestie-certificate-wrapper" id="bestie-certificate-card">
+                <div class="certificate-inner">
+                    <div class="cert-border"></div>
+                    <div class="cert-ribbon">👑</div>
+                    <h2>Bestie Lifetime Certificate</h2>
+                    <p class="cert-awarded">Awarded to the most amazing and irreplaceable friend</p>
+                    <h3 class="cert-name">Payal 💖</h3>
+                    <p class="cert-desc">For spreading endless positive energy, having the absolute cutest smile, and being the best listener in the entire universe.</p>
+                    <div class="cert-footer">
+                        <span class="cert-sig">— Signed with Love 🧸</span>
+                        <span class="cert-date">June 2, 2026</span>
+                    </div>
+                </div>
+                <button class="btn btn-cert-claim" id="claim-cert-btn">Claim Bestie Hug! 🧸💖</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <p>Made with 💖 just for Payal</p>
+    </footer>
+
+    <!-- EXTERNAL JS LIBRARIES -->
+    <!-- Three.js for 3D Background Visuals -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <!-- GSAP Core for smooth responsive animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <!-- GSAP ScrollTrigger for revealing components upon scrolling -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <!-- Canvas Confetti library for celebration bursts -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    
+    <!-- 3D WebGL Background Render at root -->
+    <script src="three-bg.js"></script>
+    
+    <!-- Custom Logic Script at root -->
+    <script src="script.js"></script>
 </body>
 </html>
